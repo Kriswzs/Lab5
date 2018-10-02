@@ -26,6 +26,19 @@ public class Bank {
      * @return boolean
      */
     public boolean withdrawMoney(final BankAccount bankAccount, final double amount) {
+        private int balance;
+        public void setBalance(int newBalance) {
+            balance = newBalance;
+        }
+        public void setAmount(double newAmount) {
+            amount = newAmount;
+            if (withdrawMoney()) {
+                return true;
+            } else {
+                return false;
+            }
+
+        }
         /*
          * Implement this function
          */
@@ -42,6 +55,19 @@ public class Bank {
      * @return boolean
      */
     public boolean depositMoney(final BankAccount bankAccount, final double amount) {
+        private int balance = 0;
+        public void setBalance(int newBalance) {
+            balance = newBalance;
+        }
+        public void setAmount(double newAmount) {
+            amount = newAmount;
+            balance += amount;
+        }
+        if (depositMoney()) {
+            return true;
+        } else {
+            return false;
+        }
         /*
          * Implement this function
          */
@@ -74,6 +100,7 @@ public class Bank {
      */
 
     public void changeOwnerName(final BankAccount bankAccount, final String name) {
+        public void Bankaccount
         /*
          * Implement this function
          */
